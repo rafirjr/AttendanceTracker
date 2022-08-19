@@ -16,6 +16,9 @@ app.use(express.json()); //access req.body
 //login routes
 app.use("/auth", require("./AuthRoutes/jwtAuth"));
 
+//dashboard route
+app.use("/dashboard", require("./AuthRoutes/dashboard"));
+
 const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
