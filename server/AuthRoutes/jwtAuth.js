@@ -11,6 +11,7 @@ router.post("/register", validInfo, async (req, res) => {
         //1. Destructure the req.body (name, email, password)
         const {name, email, password} = req.body;
         
+        console.log(req.body);
         
         //2. Check if user exists
         const user = await pool.query("SELECT * FROM users WHERE user_email =$1", [email]);
@@ -35,7 +36,7 @@ router.post("/register", validInfo, async (req, res) => {
         const token = jwtGenerator(newUser.rows[0].user_id);
 
         res.json({token});
-
+        //console.log(token);
 
     } catch (err) {
         console.error(err.message);
