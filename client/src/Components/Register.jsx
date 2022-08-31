@@ -3,7 +3,7 @@ import React, { Fragment, useState } from "react";
 //import UserFinder from "../API/UserFinder";
 //import { UsersContext } from "../Context/UsersContext";
 
-const Register = ({setAuth}) => {
+const Register = ({setAuth, setAdmin}) => {
     //const {addUsers} = useContext(UsersContext);
 
     const [inputs, setInputs] = useState({
@@ -35,6 +35,7 @@ const Register = ({setAuth}) => {
             localStorage.setItem("token", parseRes.token);
 
             setAuth(true);
+            setAdmin(false);
             
         } catch (err) {
             console.error(err.message);
