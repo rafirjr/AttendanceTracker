@@ -2,12 +2,13 @@ import React, { Fragment, useState } from 'react';
 import './App.css';
 
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import { UserContextProvider } from './Context/UserContext';
 // Switch is now Routes
 
 //components
-import Register from './Components/Register';
-import Dashboard from './Components/Dashboard';
-import Login from './Components/Login';
+import Register from './Routes/Register';
+import Dashboard from './Routes/Dashboard';
+import Login from './Routes/Login';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
 
 
   return (
-    <Fragment>
+    <UserContextProvider>
       <div className="container">
         <Router>
           <Routes>
@@ -38,7 +39,7 @@ function App() {
           </Routes>
         </Router>
       </div>        
-    </Fragment>
+    </UserContextProvider>
   );
 };
 

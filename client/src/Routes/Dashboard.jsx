@@ -39,6 +39,9 @@ const Dashboard = ({setAuth, setAdmin}) => {
         if(name === "Rafi Rajoyan") {
             setAdmin(true);
         }
+        else {
+            console.log("Not Authorized");
+        }
     };
 
     return (
