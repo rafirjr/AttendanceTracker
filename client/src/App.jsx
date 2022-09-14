@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import './App.css';
 
 import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
@@ -26,6 +26,26 @@ function App() {
   const setAdmin = Boolean => {
     setAdminAuthentication(Boolean);
   }
+
+  async function isAuth() {
+    try {
+
+      const response = await fetch("http://localhost:3006/auth/is-verify", {
+        method: "GET",
+        headers: { token: localStorage.token },
+      });
+
+      const parseRes = await response.json();
+
+      parseRes === true ? setIsAuthenticated(true): setIsAuthenticated(false);
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
+
+  useEffect(() => {
+    isAuth();
+  })
 
 
   return (

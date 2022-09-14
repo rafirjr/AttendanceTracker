@@ -51,6 +51,9 @@ app.delete("/api/v1/users/:user_id", async (req, res) => {
     }
 })
 
+//Khmpabed Route
+app.use("/api/v1/khmpabeds", require("./Routes/khmpabeds"));
+
 const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

@@ -31,7 +31,7 @@ const Dashboard = ({setAuth, setAdmin}) => {
 
     useEffect(() => {
         getName();
-    });
+    }, []);
 
 
     const onClickRegister = (e) => {
