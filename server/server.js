@@ -54,6 +54,84 @@ app.delete("/api/v1/users/:user_id", async (req, res) => {
 //Khmpabed Route
 app.use("/api/v1/khmpabeds", require("./Routes/khmpabeds"));
 
+//Roster Route
+app.use("/api/v1/roster", require("./Routes/roster"));
+
+//ROSTER
+//Get Kyligs
+app.get("/kyligs/roster", async (req, res) => {
+    try {
+        const kylig = 'Kylig';
+        const result = await db.query(
+            "SELECT * FROM roster WHERE khoump = $1",
+            [kylig]
+        );
+        res.status(200).json({
+            status: "success",
+            data: {
+                kyligs: result.rows
+            }
+        })
+    } catch (err) {
+        console.error(err.message);
+    }
+})
+//Get Ardzvigs
+app.get("/ardzvigs/roster", async (req, res) => {
+    try {
+        const ardzvig = 'Ardzvig';
+        const result = await db.query(
+            "SELECT * FROM roster WHERE khoump = $1",
+            [ardzvig]
+        );
+        res.status(200).json({
+            status: "success",
+            data: {
+                ardzvigs: result.rows
+            }
+        })
+    } catch (err) {
+        console.error(err.message);
+    }
+})
+//Get Aris
+app.get("/aris/roster", async (req, res) => {
+    try {
+        const ari = 'Ari';
+        const result = await db.query(
+            "SELECT * FROM roster WHERE khoump = $1",
+            [ari]
+        );
+        res.status(200).json({
+            status: "success",
+            data: {
+                aris: result.rows
+            }
+        })
+    } catch (err) {
+        console.error(err.message);
+    }
+})
+
+//Get Arenoushes
+app.get("/arenoushes/roster", async (req, res) => {
+    try {
+        const arenoush = 'Arenoush';
+        const result = await db.query(
+            "SELECT * FROM roster WHERE khoump = $1",
+            [arenoush]
+        );
+        res.status(200).json({
+            status: "success",
+            data: {
+                arenoushes: result.rows
+            }
+        })
+    } catch (err) {
+        console.error(err.message);
+    }
+})
+
 const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
