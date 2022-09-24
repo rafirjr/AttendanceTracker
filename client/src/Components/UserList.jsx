@@ -26,7 +26,7 @@ const UserList = (props) => {
             const response = await UserFinder.delete(`/${id}`);
             setUsers(users.filter(user => {
                 return user.user_id !== id;
-            })); //Delete restaurant with "id" and copy rest of array back into restaurant array
+            })); //Delete user with "id" and copy rest of array back into user array
             console.log("deleted user");
         } catch (err) {
             console.error(err.message);

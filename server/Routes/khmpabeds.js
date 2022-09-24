@@ -5,7 +5,7 @@ const pool = require("../db/index");
 router.get("/", async (req, res) => {
     try {
         const result = await pool.query(
-            "SELECT first_name, last_name, gark, astijan, bashdon, khoump, cell FROM khmpabeds"
+            "SELECT * FROM khmpabeds"
         );
         res.status(200).json({
             status: "success",

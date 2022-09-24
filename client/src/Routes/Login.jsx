@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import hmemLogo from '../images/Hmemlogo2019.png';
 
 const Login = ({setAuth}) => {
 
@@ -45,6 +46,9 @@ const Login = ({setAuth}) => {
                 <input value={password} onChange={e => onChange(e)} className="form-control my-3" type="password" name="password" placeholder="password" />
                 <button className="btn btn-success btn-block">Submit</button>
             </form>
+            <div className="text-center">
+                <img src={hmemLogo} className="img-fluid" alt="Responsive image" />
+            </div>
         </Fragment>
     );
 }; 

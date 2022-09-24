@@ -60,7 +60,11 @@ const Dashboard = ({setAuth, setAdmin}) => {
             </div>
             <h1 className="text-center my-5">Homenetmen Crescenta Valley Shant Scouts {name}</h1>
             <img src="" />
-            <button className="btn btn-outline-primary btn-block">Khmpabeds</button>
+            <div className="my-3">
+                <Link to="/dashboard/khmpabeds">
+                    <button className="btn btn-outline-primary btn-block">Khmpabeds</button>
+                </Link> 
+            </div>
             <button className="btn btn-outline-primary btn-block">Ari</button>
             <button className="btn btn-outline-primary btn-block">Arenoush</button>
             <button className="btn btn-outline-primary btn-block">Kylig</button>
