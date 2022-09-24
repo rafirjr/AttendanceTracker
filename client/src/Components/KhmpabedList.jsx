@@ -60,7 +60,7 @@ const KhmpabedList = (props) => {
                 <tbody>
                     {khmpabeds && khmpabeds.map(khmpabed => {
                         return (
-                            <tr key="{khmpabed.scout_id}">
+                            <tr key={khmpabed.scout_id}>
                                 <td>{khmpabed.first_name}</td>
                                 <td>{khmpabed.last_name}</td>
                                 <td>{khmpabed.gark}</td>

@@ -13,7 +13,7 @@ INSERT INTO  users (user_name, user_email, user_password) VALUES ('Rafi Rajoyan'
 
 CREATE TYPE gark AS ENUM('Norendza', 'Pen Gark', 'Ayp Gark', 'Vgayal', 'Araratyan');
 CREATE TYPE astijan AS ENUM('Pokh Arachnort', 'Arachnort', 'Vareech Arachnort', 'Pokh Khmpabed', 'Khmpabed');
-CREATE TYPE bashdon AS ENUM('Arachnort', 'Vareech Arachnort', 'Pokh Khmpabed', 'Khmpabed', 'Miavori', 'Pokh Masnajooghi Khmpabed', 'Masnajooghi Khmpabed');
+CREATE TYPE bashdon AS ENUM('Pokh Arachnort', 'Arachnort', 'Vareech Arachnort', 'Pokh Khmpabed', 'Khmpabed', 'Miavori', 'Pokh Masnajooghi Khmpabed', 'Masnajooghi Khmpabed');
 CREATE TYPE khoump AS ENUM('Kylig', 'Ardzvig', 'Ari', 'Arenoush', 'Yeretz', 'Barmanouhi');
 
 --Khmpabed Table
