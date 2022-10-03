@@ -65,9 +65,14 @@ const Dashboard = ({setAuth, setAdmin}) => {
                     <button className="btn btn-outline-primary btn-block">Khmpabeds</button>
                 </Link> 
             </div>
+            <div className="my-3">
+                <Link to="/dashboard/kyligs">
+                    <button className="btn btn-outline-primary btn-block">Kylig</button>
+                </Link>
+            </div>
             <button className="btn btn-outline-primary btn-block">Ari</button>
             <button className="btn btn-outline-primary btn-block">Arenoush</button>
-            <button className="btn btn-outline-primary btn-block">Kylig</button>
+            
             <button className="btn btn-outline-primary btn-block">Ardzvig</button>
             
         </Fragment>

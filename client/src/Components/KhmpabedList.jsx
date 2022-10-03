@@ -53,8 +53,8 @@ const KhmpabedList = (props) => {
                         <th scope="col">Bashdon</th>
                         <th scope="col">Khoump</th>
                         <th scope="col">Cell</th>
-                        <th scope="col">Update</th>
-                        <th scope="col">Delete</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
